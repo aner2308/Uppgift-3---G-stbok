@@ -6,9 +6,10 @@ namespace GuestbookApp
     {
         static void Main()
         {
+            Guestbook guestbook = new();
 
-            // Testar Post-klassen
-            TryPost();
+
+            //TryPost();       // Testar Post-klassen
 
             while (true)
             {
@@ -32,7 +33,11 @@ namespace GuestbookApp
                 switch (choice)
                 {
                     case "1":
-                        Console.WriteLine("Menyval 1 fungerar!");
+                        Console.Write("Namnge författare: ");
+                        string writer = Console.ReadLine();
+                        Console.Write("Skriv ditt meddelande: ");
+                        string message = Console.ReadLine();
+                        guestbook.AddPost(writer, message);
                         break;
 
                     case "2":
@@ -56,17 +61,17 @@ namespace GuestbookApp
                 Console.ReadKey();
             }
         }
-        static void TryPost()
-        {
-            // Skapar ett testinlägg
-            Post p = new("Anton", "Det här är ett testinlägg");
+        // static void TryPost()
+        // {
+        //     // Skapar ett testinlägg
+        //     Post p = new("Anton", "Det här är ett testinlägg");
 
-            // Testar om ToString-metoden fungerar som förväntat
-            Console.WriteLine(p.ToString());
+        //     // Testar om ToString-metoden fungerar som förväntat
+        //     Console.WriteLine(p.ToString());
 
-            // Väntar på att användaren trycker på en tangent innan vi fortsätter till menyn
-            Console.WriteLine("Tryck på valfri tangent för att fortsätta till menyn...");
-            Console.ReadKey();
-        }
+        //     // Väntar på att användaren trycker på en tangent innan man fortsätter till menyn
+        //     Console.WriteLine("Tryck på valfri tangent för att fortsätta till menyn...");
+        //     Console.ReadKey();
+        // }
     }
 }
