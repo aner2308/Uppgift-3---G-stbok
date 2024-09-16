@@ -6,6 +6,10 @@ namespace GuestbookApp
     {
         static void Main()
         {
+
+            // Testar Post-klassen
+            TryPost();
+
             while (true)
             {
                 //Rensar konsollen innan menyn skrivs ut
@@ -51,6 +55,18 @@ namespace GuestbookApp
                 Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
                 Console.ReadKey();
             }
+        }
+        static void TryPost()
+        {
+            // Skapar ett testinlägg
+            Post p = new("Anton", "Det här är ett testinlägg");
+
+            // Testar om ToString-metoden fungerar som förväntat
+            Console.WriteLine(p.ToString());
+
+            // Väntar på att användaren trycker på en tangent innan vi fortsätter till menyn
+            Console.WriteLine("Tryck på valfri tangent för att fortsätta till menyn...");
+            Console.ReadKey();
         }
     }
 }

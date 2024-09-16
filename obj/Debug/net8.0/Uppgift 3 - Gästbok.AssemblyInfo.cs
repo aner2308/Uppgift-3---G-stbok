@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uppgift 3 - Gästbok")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8847c3132e242a975d431724857dab991c053740")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf158c024ab3267cc13ad7ec49b4bff1c180c03f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uppgift 3 - Gästbok")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uppgift 3 - Gästbok")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
