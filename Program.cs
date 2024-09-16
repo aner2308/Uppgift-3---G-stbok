@@ -14,7 +14,9 @@ while (true)
     Console.Write("Välj ett alternativ: ");
 
     //Låter användaren skriva in sitt menyval
-    string choice = Console.ReadLine();
+    string choice = Console.ReadLine().Trim();
+
+    Console.Clear();
 
     //Jämför användarens inmantning med en switch-sats
     switch (choice)
