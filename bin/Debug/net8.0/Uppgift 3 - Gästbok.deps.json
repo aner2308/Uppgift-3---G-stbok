@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Uppgift 3 - Gästbok/1.0.0": {
+        "runtime": {
+          "Uppgift 3 - Gästbok.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Uppgift 3 - Gästbok/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

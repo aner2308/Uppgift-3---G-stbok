@@ -1,0 +1,14 @@
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\bin\Debug\net8.0\Uppgift 3 - Gästbok.exe
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\bin\Debug\net8.0\Uppgift 3 - Gästbok.deps.json
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\bin\Debug\net8.0\Uppgift 3 - Gästbok.runtimeconfig.json
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\bin\Debug\net8.0\Uppgift 3 - Gästbok.dll
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\bin\Debug\net8.0\Uppgift 3 - Gästbok.pdb
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.AssemblyInfoInputs.cache
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.AssemblyInfo.cs
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.csproj.CoreCompileInputs.cache
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.dll
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\refint\Uppgift 3 - Gästbok.dll
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.pdb
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\Uppgift 3 - Gästbok.genruntimeconfig.cache
+C:\Users\eriks\Desktop\Skola\Termin 3\C#.NET\Uppgift 3 - Gästbok\obj\Debug\net8.0\ref\Uppgift 3 - Gästbok.dll
