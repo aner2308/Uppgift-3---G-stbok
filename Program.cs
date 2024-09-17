@@ -7,6 +7,7 @@ namespace GuestbookApp
         static void Main()
         {
             Guestbook guestbook = new();
+            guestbook.LoadPosts();
 
 
             //TryPost();       // Testar Post-klassen
