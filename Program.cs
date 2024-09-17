@@ -39,20 +39,7 @@ namespace GuestbookApp
                         break;
 
                     case "2":
-                        guestbook.ShowPosts();
-                        Console.WriteLine("Skriv in numret på inlägget du vill radera: ");
-
-                        if (int.TryParse(Console.ReadLine(), out int index))
-                        {
-                            guestbook.RemovePost(index);
-                            Console.WriteLine($"Inlägg nummer {index} har tagits bort.");
-                            Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn...");
-                            Console.ReadKey();
-                        }
-                        else
-                        {
-                            Console.WriteLine("Error: Felaktig inmatning.");
-                        }
+                        guestbook.RemovePost();
                         break;
 
                     case "3":

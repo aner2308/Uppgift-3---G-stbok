@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Text.Json;
 
 namespace GuestbookApp
@@ -5,13 +8,13 @@ namespace GuestbookApp
     public class Guestbook
     {
         private List<Post> posts = [];  //Lista med alla gästboksinlägg.
-        private const string FileName = "guestbook.json";   
+        private const string FileName = "guestbook.json";
 
         //Funktion för att lägga till inlägg med parametrarna som användaren fyllt i.
         public void AddPost(string writer, string message)
         {
             //Kontrollerar så att inget fält har lämnats tomt.
-            if(string.IsNullOrWhiteSpace(writer) || string.IsNullOrWhiteSpace(message))
+            if (string.IsNullOrWhiteSpace(writer) || string.IsNullOrWhiteSpace(message))
             {
                 Console.WriteLine("Error: Både författare och meddelande måste vara ifyllt.");
                 return;
@@ -21,19 +24,55 @@ namespace GuestbookApp
             SavePosts();
         }
 
-//Funktion för att ta bort ett gästboksinlägg.
-        public void RemovePost(int index)
+        //Funktion för att ta bort ett gästboksinlägg.
+        public void RemovePost()
         {
 
-            //Kontrollerar att det finns ett inlägg med det angivna numret.
-            if (index < 0 || index >= posts.Count)
+            while (true)
             {
-                Console.WriteLine("Error: Det finns inget inlägg med det angivna nummret.");
-                return;
+
+                ShowPosts();
+
+                Console.WriteLine("Ange numret för inlägget du vill ta bort, eller skriv 'R' för att återgå till menyn");
+                string input = Console.ReadLine();
+
+                if (input.Trim().ToUpper() == "R")
+                {
+                    return;
+                }
+
+                if (int.TryParse(input, out int num))
+                {
+                    //Kontrollerar att det finns ett inlägg med det angivna numret.
+                    if (num < 0 || num >= posts.Count)
+                    {
+
+                        Console.WriteLine("Error: Det finns inget inlägg med det angivna nummret.");
+                    }
+                    else
+                    {
+                        posts.RemoveAt(num);
+                        Console.WriteLine($"Inlägg nummer {num} har tagits bort.");
+                        SavePosts();
+                        Console.WriteLine("Tryck på valfri tangent för att återgå till menyn...");
+                        Console.ReadKey();
+                        return;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Error: Ogiltig inmatning. Vänligen ange en giltig siffra.");
+                }
+
+                Console.WriteLine("Vill du försöka igen? 'J/N': ");
+                string tryAgain = Console.ReadLine().Trim().ToUpper();
+
+                if (tryAgain == "N")
+                {
+                    return;
+                }
             }
 
-            posts.RemoveAt(index);
-            SavePosts();
         }
 
         public void ShowPosts()
@@ -42,7 +81,7 @@ namespace GuestbookApp
             if (posts.Count == 0)
             {
                 Console.WriteLine("Gästboken är tom.");
-            } 
+            }
             else
             {
                 for (int i = 0; i < posts.Count; i++)
