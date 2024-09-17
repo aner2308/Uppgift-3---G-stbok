@@ -23,6 +23,22 @@ namespace GuestbookApp
             SavePosts();
         }
 
+        public void ShowPosts()
+        {
+            Console.Clear();
+            if (posts.Count == 0)
+            {
+                Console.WriteLine("Gästboken är tom.");
+            } 
+            else
+            {
+                for (int i = 0; i < posts.Count; i++)
+                {
+                    Console.WriteLine($"{i}: {posts[i]}");
+                }
+            }
+        }
+
         //Konverterar om gästboksinläggen från JSON-filen tillbaka till läsbar text i listformat. 
         public void LoadPosts()
         {

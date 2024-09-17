@@ -42,11 +42,14 @@ namespace GuestbookApp
                         break;
 
                     case "2":
+                        guestbook.ShowPosts();
                         Console.WriteLine("Menyval 2 fungerar!");
                         break;
 
                     case "3":
-                        Console.WriteLine("Menyval 3 fungerar!");
+                        guestbook.ShowPosts();
+                        Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn...");
+                        Console.ReadKey();
                         break;
 
                     case "4":
