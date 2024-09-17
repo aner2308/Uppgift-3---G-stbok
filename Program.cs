@@ -9,9 +9,6 @@ namespace GuestbookApp
             Guestbook guestbook = new();
             guestbook.LoadPosts();
 
-
-            //TryPost();       // Testar Post-klassen
-
             while (true)
             {
                 //Rensar konsollen innan menyn skrivs ut
@@ -43,7 +40,19 @@ namespace GuestbookApp
 
                     case "2":
                         guestbook.ShowPosts();
-                        Console.WriteLine("Menyval 2 fungerar!");
+                        Console.WriteLine("Skriv in numret på inlägget du vill radera: ");
+
+                        if (int.TryParse(Console.ReadLine(), out int index))
+                        {
+                            guestbook.RemovePost(index);
+                            Console.WriteLine($"Inlägg nummer {index} har tagits bort.");
+                            Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn...");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: Felaktig inmatning.");
+                        }
                         break;
 
                     case "3":
@@ -53,29 +62,13 @@ namespace GuestbookApp
                         break;
 
                     case "4":
-                        Console.WriteLine("Menyval 4 fungerar!");
                         return;
 
                     default:
                         Console.WriteLine("Error: Felaktig inmatning. Försök igen...");
                         break;
                 }
-
-                Console.WriteLine("Tryck på valfri tangent för att fortsätta...");
-                Console.ReadKey();
             }
         }
-        // static void TryPost()
-        // {
-        //     // Skapar ett testinlägg
-        //     Post p = new("Anton", "Det här är ett testinlägg");
-
-        //     // Testar om ToString-metoden fungerar som förväntat
-        //     Console.WriteLine(p.ToString());
-
-        //     // Väntar på att användaren trycker på en tangent innan man fortsätter till menyn
-        //     Console.WriteLine("Tryck på valfri tangent för att fortsätta till menyn...");
-        //     Console.ReadKey();
-        // }
     }
 }

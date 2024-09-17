@@ -1,5 +1,3 @@
-using System;
-using System.IO.Enumeration;
 using System.Text.Json;
 
 namespace GuestbookApp
@@ -23,6 +21,21 @@ namespace GuestbookApp
             SavePosts();
         }
 
+//Funktion för att ta bort ett gästboksinlägg.
+        public void RemovePost(int index)
+        {
+
+            //Kontrollerar att det finns ett inlägg med det angivna numret.
+            if (index < 0 || index >= posts.Count)
+            {
+                Console.WriteLine("Error: Det finns inget inlägg med det angivna nummret.");
+                return;
+            }
+
+            posts.RemoveAt(index);
+            SavePosts();
+        }
+
         public void ShowPosts()
         {
             Console.Clear();
@@ -34,7 +47,7 @@ namespace GuestbookApp
             {
                 for (int i = 0; i < posts.Count; i++)
                 {
-                    Console.WriteLine($"{i}: {posts[i]}");
+                    Console.WriteLine($"[{i}]: {posts[i]}");
                 }
             }
         }
