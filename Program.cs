@@ -22,6 +22,7 @@ namespace GuestbookApp
                 Console.WriteLine("  2. Ta bort inlägg");
                 Console.WriteLine("  3. Visa alla inlägg");
                 Console.WriteLine("  4. Avsluta");
+                Console.WriteLine("");
                 Console.Write("Välj ett alternativ: ");
 
                 //Låter användaren skriva in sitt menyval
@@ -46,6 +47,7 @@ namespace GuestbookApp
 
                     case "3":
                         guestbook.ShowPosts();
+                        Console.WriteLine("");
                         Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn...");
                         Console.ReadKey();
                         break;

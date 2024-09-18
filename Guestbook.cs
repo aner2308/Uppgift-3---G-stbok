@@ -55,6 +55,9 @@ namespace GuestbookApp
                     }
                     else
                     {
+                        //Rensar konsollen
+                        Console.Clear();
+                        
                         //Tar bort inläggen på den angivna positionen i listan. (Som kommer att matcha inläggets siffra i konsollen).
                         posts.RemoveAt(num);
                         Console.WriteLine($"Inlägg nummer {num} har tagits bort.");
