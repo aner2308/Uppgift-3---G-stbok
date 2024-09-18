@@ -6,6 +6,7 @@ namespace GuestbookApp
     {
         static void Main()
         {
+
             Guestbook guestbook = new();
             guestbook.LoadPosts();
 
@@ -16,6 +17,7 @@ namespace GuestbookApp
 
                 //Skriver ut menyn med menyval
                 Console.WriteLine("Välkommen till Antons gästbok!");
+                Console.WriteLine("");
                 Console.WriteLine("  1. Skapa inlägg");
                 Console.WriteLine("  2. Ta bort inlägg");
                 Console.WriteLine("  3. Visa alla inlägg");
