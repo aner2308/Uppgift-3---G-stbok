@@ -16,14 +16,14 @@ namespace GuestbookApp
                 Console.Clear();
 
                 //Skriver ut menyn med menyval
-                Console.WriteLine("Välkommen till Antons gästbok!");
+                Console.WriteLine("A N T O N S  G U E S T B O O K");
                 Console.WriteLine("");
-                Console.WriteLine("  1. Skapa inlägg");
-                Console.WriteLine("  2. Ta bort inlägg");
-                Console.WriteLine("  3. Visa alla inlägg");
-                Console.WriteLine("  4. Avsluta");
+                Console.WriteLine("  1. Create post");
+                Console.WriteLine("  2. Remove post");
+                Console.WriteLine("  3. Show all posts");
+                Console.WriteLine("  4. Exit");
                 Console.WriteLine("");
-                Console.Write("Välj ett alternativ: ");
+                Console.Write("Choose an option: ");
 
                 //Låter användaren skriva in sitt menyval
                 string choice = Console.ReadLine().Trim();
@@ -34,9 +34,9 @@ namespace GuestbookApp
                 switch (choice)
                 {
                     case "1":
-                        Console.Write("Namnge författare: ");
+                        Console.Write("Name writer: ");
                         string writer = Console.ReadLine();
-                        Console.Write("Skriv ditt meddelande: ");
+                        Console.Write("Write your message: ");
                         string message = Console.ReadLine();
                         guestbook.AddPost(writer, message);
                         break;
@@ -48,7 +48,7 @@ namespace GuestbookApp
                     case "3":
                         guestbook.ShowPosts();
                         Console.WriteLine("");
-                        Console.WriteLine("Tryck på valfri tangent för att gå tillbaka till menyn...");
+                        Console.WriteLine("Press any key to return to menu.");
                         Console.ReadKey();
                         break;
 
@@ -56,7 +56,7 @@ namespace GuestbookApp
                         return;
 
                     default:
-                        Console.WriteLine("Error: Felaktig inmatning. Försök igen...");
+                        Console.WriteLine("Error: Option unavailable. Please try again...");
                         break;
                 }
             }

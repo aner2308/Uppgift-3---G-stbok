@@ -13,7 +13,7 @@ namespace GuestbookApp
             //Kontrollerar så att inget fält har lämnats tomt.
             if (string.IsNullOrWhiteSpace(writer) || string.IsNullOrWhiteSpace(message))
             {
-                Console.WriteLine("Error: Både författare och meddelande måste vara ifyllt.");
+                Console.WriteLine("Error: Both writer and message must be submitted.");
                 return;
             }
 
@@ -35,7 +35,7 @@ namespace GuestbookApp
                 ShowPosts();
 
                 Console.WriteLine("");
-                Console.WriteLine("Ange numret för inlägget du vill ta bort, eller skriv 'R' för att återgå till menyn.");
+                Console.WriteLine("Choose the number of the post that you wish to remove, or press 'R' to return.");
                 string input = Console.ReadLine();
 
                 //Tar en tillbaka till menyn om man väljer "R".
@@ -51,7 +51,7 @@ namespace GuestbookApp
                     if (num < 0 || num >= posts.Count)
                     {
 
-                        Console.WriteLine("Error: Det finns inget inlägg med det angivna nummret.");
+                        Console.WriteLine("Error: No existing post with the given number.");
                     }
                     else
                     {
@@ -60,9 +60,9 @@ namespace GuestbookApp
                         
                         //Tar bort inläggen på den angivna positionen i listan. (Som kommer att matcha inläggets siffra i konsollen).
                         posts.RemoveAt(num);
-                        Console.WriteLine($"Inlägg nummer {num} har tagits bort.");
+                        Console.WriteLine($"Post number {num} has been removed.");
                         SavePosts();
-                        Console.WriteLine("Tryck på valfri tangent för att återgå till menyn...");
+                        Console.WriteLine("Press any key to return to menu.");
                         Console.ReadKey();
                         return;
                     }
@@ -70,11 +70,11 @@ namespace GuestbookApp
                 else
                 {
                     //Felmeddelane vid felaktig inmatning.
-                    Console.WriteLine("Error: Ogiltig inmatning. Vänligen ange en giltig siffra.");
+                    Console.WriteLine("Error: Bad submission. Please submit an existing number.");
                 }
 
                 //Fråga om att försöka igen om man gjort fel.
-                Console.WriteLine("Vill du försöka igen? 'J/N': ");
+                Console.WriteLine("Would you like to try again? 'Y/N': ");
                 string tryAgain = Console.ReadLine().Trim().ToUpper();
 
                 //Bryter while-loopen om man väljer "N" och tar en tillbaka till huvudmenyn.
@@ -96,7 +96,7 @@ namespace GuestbookApp
             //Kontrollerar om det finns några inlägg
             if (posts.Count == 0)
             {
-                Console.WriteLine("Gästboken är tom.");
+                Console.WriteLine("The guestbook is empty...");
             }
             else
             {
